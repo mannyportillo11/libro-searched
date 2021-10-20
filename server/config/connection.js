@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/libro-seached',
-  // {
-  //   useNewUrlParser: true, 
-  //   useUnifiedTopology: true,
-  //   useCreateIndex: true,
-  //   useFindAndModify: false
-  // }
+  {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
 );
 
 module.exports = mongoose.connection;
